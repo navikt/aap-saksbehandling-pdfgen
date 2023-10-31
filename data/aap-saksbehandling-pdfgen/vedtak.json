@@ -1,0 +1,94 @@
+{
+    "mottaker": {
+        "navn": "Ola Nordmann",
+        "ident": "12345678910"
+    },
+    "saksnummer": "AABBCC123",
+    "dato": "11. august 2023",
+    "underblokker": [
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et annet avsnitt"
+        },
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        },
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        },
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        },
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        },
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        },
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        },
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        },
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        },
+        {
+            "type": "heading-one",
+            "text": "Dette er en overskrift"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dette er et avsnitt"
+        }
+    ]
+}
