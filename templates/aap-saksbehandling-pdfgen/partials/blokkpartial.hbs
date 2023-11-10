@@ -1,8 +1,21 @@
-{{#eq type "heading-one"}}
-    <div class="avoid-page-break">
-        <h2 class="element-overskrift">{{ this.text }}</h2>
-    </div>
-{{/eq}}
-{{#eq type "paragraph"}}
-    <p>{{ this.text }}</p>
-{{/eq}}
+{{#each children as |child|~}}
+    {{#if bold }}
+        <b>
+    {{/if}}
+    {{#if italic }}
+        <em>
+    {{/if}}
+    {{#if underline }}
+        <u>
+    {{/if}}
+    {{ child.text }}
+    {{#if underline }}
+        </u>
+    {{/if}}
+    {{#if italic }}
+        </em>
+    {{/if}}
+    {{#if bold }}
+        </b>
+    {{/if}}
+{{/each}}

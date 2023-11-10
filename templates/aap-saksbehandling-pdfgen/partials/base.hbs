@@ -26,8 +26,8 @@
         </div>
         <div class="container">
             {{#each underblokker as |blokk|~}}
-                <div class="blokk">
-                    {{> aap-saksbehandling-pdfgen/partials/blokkpartial blokk}}
+                <div class="blokk avoid-page-break">
+                    {{> aap-saksbehandling-pdfgen/partials/elementpartial blokk}}
                 </div>
             {{/each}}
         </div>
