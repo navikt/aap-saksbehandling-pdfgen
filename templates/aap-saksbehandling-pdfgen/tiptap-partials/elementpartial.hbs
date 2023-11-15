@@ -1,0 +1,45 @@
+{{#eq type "heading"}}
+    {{#eq this.attrs.level 1}}
+            <h1 class="element-overskrift">
+                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial this}}
+            </h1>
+    {{/eq}}
+    {{#eq this.attrs.level 2}}
+            <h2 class="element-overskrift">
+                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial this}}
+            </h2>
+    {{/eq}}
+    {{#eq this.attrs.level 3}}
+            <h3 class="element-overskrift">
+                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial this}}
+            </h3>
+    {{/eq}}
+    {{#eq this.attrs.level 4}}
+            <h4 class="element-overskrift">
+                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial this}}
+            </h4>
+    {{/eq}}
+{{/eq}}
+{{#eq type "bulleted-list"}}
+    <ul>
+        {{#each children as |child|~}}
+            <li>
+                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial this}}
+            </li>
+        {{/each}}
+    </ul>
+{{/eq}}
+{{#eq type "ordered-list"}}
+    <ol>
+        {{#each children as |child|~}}
+            <li>
+                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial this}}
+            </li>
+        {{/each}}
+    </ol>
+{{/eq}}
+{{#eq type "paragraph"}}
+    <p>
+        {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial this}}
+    </p>
+{{/eq}}

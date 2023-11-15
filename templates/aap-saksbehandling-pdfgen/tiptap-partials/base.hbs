@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>{{> doctitle}}</title>
+        <meta name="description" content="{{> docdescription}}"/>
+        <meta name="subject" content="{{> docsubject}}"/>
+        <meta name="author" content="NAV IT"/>
+        {{#block 'aap-saksbehandling-pdfgen/tiptap-partials/style' }}
+        {{/block}}
+    </head>
+    <body>
+        <main>
+        <div class="header">
+            <img class="navLogo" alt="nav logo" src="{{ image "navlogored.png" }}" />
+
+            <div class="personalia">
+                <p>Navn: {{ mottaker.navn }}</p>
+                <p>Fødselsnummer: {{ mottaker.ident }}</p>
+                <p>Dato: {{dato}}</p>
+                <p>Saksnummer: {{saksnummer}}</p>
+            </div>
+        </div>
+        <div class="title-wrapper">
+            <h1>{{> title}}</h1>
+        </div>
+        <div class="container">
+            {{#each underblokker as |blokk|~}}
+                <div class="blokk avoid-page-break">
+                    {{> aap-saksbehandling-pdfgen/tiptap-partials/elementpartial blokk}}
+                </div>
+            {{/each}}
+        </div>
+        </main>
+        <div id="footer">
+            <span class="saksnummer">Saksnummer {{ saksnummer }}</span>
+            <span class="sidetall">side <span id="pagenumber"></span> av <span id="pagecount"></span></span>
+        </div>
+    </body>
+</html>

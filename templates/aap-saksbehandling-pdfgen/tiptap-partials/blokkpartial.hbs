@@ -1,0 +1,27 @@
+{{#each content as |child|~}}
+    {{#if child.marks.length}}
+        {{#each marks as |mark|~}}
+            {{#eq mark.type "bold" }}
+                <b>
+            {{/eq}}
+        {{/each}}
+        {{#each marks as |mark|~}}
+            {{#eq mark.type "italic" }}
+                <em>
+            {{/eq}}
+        {{/each}}
+    {{/if}}
+    {{ child.text }}
+    {{#if child.marks.length}}
+        {{#each marks as |mark|~}}
+            {{#eq mark.type "italic" }}
+                </em>
+            {{/eq}}
+        {{/each}}
+        {{#each marks as |mark|~}}
+            {{#eq mark.type "bold" }}
+                </b>
+            {{/eq}}
+        {{/each}}
+    {{/if}}
+{{/each}}
