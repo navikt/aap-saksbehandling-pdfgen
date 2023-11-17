@@ -1,6 +1,9 @@
 {{#each content as |child|~}}
     <li>
         {{#each child.content as |listelement|~}}
+            {{#eq listelement.type "bulletList"}}
+                {{> aap-saksbehandling-pdfgen/tiptap-partials/bulletlistpartial listelement}}
+            {{/eq}}
             {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial listelement}}
         {{/each}}
     </li>
