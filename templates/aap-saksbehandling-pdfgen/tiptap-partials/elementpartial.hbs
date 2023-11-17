@@ -20,22 +20,14 @@
             </h4>
     {{/eq}}
 {{/eq}}
-{{#eq type "bulleted-list"}}
+{{#eq type "bulletList"}}
     <ul>
-        {{#each children as |child|~}}
-            <li>
-                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial this}}
-            </li>
-        {{/each}}
+        {{> aap-saksbehandling-pdfgen/tiptap-partials/listelementpartial this}}
     </ul>
 {{/eq}}
-{{#eq type "ordered-list"}}
+{{#eq type "orderedList"}}
     <ol>
-        {{#each children as |child|~}}
-            <li>
-                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial this}}
-            </li>
-        {{/each}}
+        {{> aap-saksbehandling-pdfgen/tiptap-partials/listelementpartial this}}
     </ol>
 {{/eq}}
 {{#eq type "paragraph"}}

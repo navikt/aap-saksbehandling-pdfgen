@@ -1,0 +1,7 @@
+{{#each content as |child|~}}
+    <li>
+        {{#each child.content as |listelement|~}}
+            {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial listelement}}
+        {{/each}}
+    </li>
+{{/each}}
