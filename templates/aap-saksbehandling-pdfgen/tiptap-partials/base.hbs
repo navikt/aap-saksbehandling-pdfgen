@@ -26,8 +26,21 @@
         </div>
         <div class="container">
             {{#each underblokker as |blokk|~}}
+                {{#if blokk.overskrift}}
+                    {{#eq blokk.nivå 'H1'}}
+                        <h1>{{ blokk.overskrift }}</h1>
+                    {{/eq}}
+                    {{#eq blokk.nivå 'H2'}}
+                        <h2>{{ blokk.overskrift }}</h2>
+                    {{/eq}}
+                    {{#eq blokk.nivå 'H3'}}
+                        <h3>{{ blokk.overskrift }}</h3>
+                    {{/eq}}
+                {{/if}}
                 <div class="blokk avoid-page-break">
-                    {{> aap-saksbehandling-pdfgen/tiptap-partials/elementpartial blokk}}
+                    {{#each blokk.content as |content|~}}
+                        {{> aap-saksbehandling-pdfgen/tiptap-partials/elementpartial content}}
+                    {{/each}}
                 </div>
             {{/each}}
         </div>
