@@ -9,7 +9,7 @@ spec:
   accessPolicy:
     inbound:
       rules:
-        - application: saksbehandling
+        - application: aap-saksbehandling
 
   image: {{ image }}
   replicas:
