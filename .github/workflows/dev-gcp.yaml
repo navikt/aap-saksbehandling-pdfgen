@@ -1,37 +1,40 @@
-name: Manual deploy to dev environment
+name: Deploy til dev ved endringer på main
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
   workflow_dispatch:
-
-env:
-  IMAGE: docker.pkg.github.com/${{ github.repository }}/aap-saksbehandling-pdfgen:${{ github.sha }}
-
 jobs:
-  build:
+  build_and_push:
     permissions:
-      contents: read
-      actions: read
-      checks: write
-      id-token: write
-      packages: write
-    name: Build and push Docker container
+      contents: "read"
+      id-token: "write"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Build and publish Docker image
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: nais/docker-build-push@v0
+        id: docker-push
+        with:
+          team: aap # required
+          push_image: true # optional, default true
+          pull: true # optional, default false
+          dockerfile: Dockerfile # optional, default Dockerfile
+          docker_context: . # optional, default .
+          cache_from: type=gha # optional, default type=gha
+          cache_to: type=gha,mode=max # optional, default type=gha,mode=max
+          build_secrets:
+            | # optional, default empty. See https://docs.docker.com/build/ci/github-actions/secrets/
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }} # required, but is defined as an organization variable
+          identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }} # required, but is defined as an organization secret
+          salsa: true # optional, default true, generates a attestation for the image
+      - name: Deploy
+        uses: nais/deploy/actions/deploy@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          docker build --pull --tag ${IMAGE} .
-          docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY} -p ${GITHUB_TOKEN}
-          docker push ${IMAGE}
-  deploy_to_dev:
-    name: Deploy to dev
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      -   uses: actions/checkout@v3
-      -   uses: nais/deploy/actions/deploy@v1
-          env:
-            APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-            CLUSTER: dev-gcp
-            RESOURCE: nais.yaml
+          IMAGE: ${{ steps.docker-push.outputs.image }}
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: nais.yaml
