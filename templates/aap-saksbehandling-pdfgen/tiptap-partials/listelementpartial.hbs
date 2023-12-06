@@ -7,7 +7,7 @@
             {{#eq listelement.type "orderedList"}}
                 {{> aap-saksbehandling-pdfgen/tiptap-partials/orderedlistpartial listelement}}
             {{/eq}}
-            {{#eq}}
+            {{#eq listelement.type "paragraph"}}
                 {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial listelement}}
             {{/eq}}
         {{/each}}
