@@ -10,9 +10,19 @@
                 <em>
             {{/eq}}
         {{/each}}
+        {{#each marks as |mark|~}}
+            {{#eq mark.type "underline" }}
+                <u>
+            {{/eq}}
+        {{/each}}
     {{/if}}
     {{ child.text }}
     {{#if child.marks.length}}
+        {{#each marks as |mark|~}}
+            {{#eq mark.type "underline" }}
+                </u>
+            {{/eq}}
+        {{/each}}
         {{#each marks as |mark|~}}
             {{#eq mark.type "italic" }}
                 </em>
