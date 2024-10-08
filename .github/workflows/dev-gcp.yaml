@@ -29,7 +29,6 @@ jobs:
           tag: ${{ github.sha }}
   deploy_to_dev:
     name: Deploy to dev
-    if: github.event.pull_request.merged || github.event_name == 'push' || github.event.inputs.cluster == 'dev-gcp'
     permissions:
       contents: read
       id-token: write
