@@ -10,7 +10,6 @@ spec:
     inbound:
       rules:
         - application: saksbehandling
-
   image: {{ image }}
   replicas:
     min: 2
@@ -23,3 +22,11 @@ spec:
   prometheus:
     enabled: true
     path: /prometheus
+  observability:
+    autoInstrumentation:
+      enabled: true
+      runtime: "java"
+    logging:
+        destinations:
+            - id: elastic
+            - id: loki
