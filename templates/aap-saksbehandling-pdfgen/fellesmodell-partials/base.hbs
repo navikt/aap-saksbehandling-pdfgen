@@ -6,7 +6,7 @@
         <meta name="description" content="{{> docdescription}}"/>
         <meta name="subject" content="{{> docsubject}}"/>
         <meta name="author" content="NAV IT"/>
-        {{#block 'aap-saksbehandling-pdfgen/tiptap-partials/style' }}
+        {{#block 'aap-saksbehandling-pdfgen/fellesmodell-partials/style' }}
         {{/block}}
     </head>
     <body>
@@ -39,7 +39,7 @@
                 {{/if}}
                 <div class="blokk avoid-page-break">
                     {{#each blokk.content as |content|~}}
-                        {{> aap-saksbehandling-pdfgen/tiptap-partials/elementpartial content}}
+                        {{> aap-saksbehandling-pdfgen/fellesmodell-partials/elementpartial content}}
                     {{/each}}
                 </div>
             {{/each}}

@@ -2,16 +2,16 @@
     <li>
         {{#each child.content as |listelement|~}}
             {{#eq listelement.type "bulletList"}}
-                {{> aap-saksbehandling-pdfgen/tiptap-partials/bulletlistpartial listelement}}
+                {{> aap-saksbehandling-pdfgen/fellesmodell-partials/bulletlistpartial listelement}}
             {{/eq}}
             {{#eq listelement.type "orderedList"}}
-                {{> aap-saksbehandling-pdfgen/tiptap-partials/orderedlistpartial listelement}}
+                {{> aap-saksbehandling-pdfgen/fellesmodell-partials/orderedlistpartial listelement}}
             {{/eq}}
             {{#eq listelement.type "paragraph"}}
-                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial listelement}}
+                {{> aap-saksbehandling-pdfgen/fellesmodell-partials/blokkpartial listelement}}
             {{/eq}}
             {{#eq listelement.type "text"}}
-                {{> aap-saksbehandling-pdfgen/tiptap-partials/blokkpartial listelement}}
+                {{> aap-saksbehandling-pdfgen/fellesmodell-partials/blokkpartial listelement}}
             {{/eq}}
         {{/each}}
     </li>
