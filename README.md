@@ -1,7 +1,7 @@
 # aap-saksbehandling-pdfgen
 PDF generator for aap-saksbehandling. Kjør lokalt docker image med  `./run_development.sh`
 
-PDFene kan testes lokalt på `http://localhost:8081/api/v1/genpdf/<application>/<template>`, f.eks.
+PDFene kan testes lokalt på `http://localhost:8020/api/v1/genpdf/<application>/<template>`, f.eks.
 http://localhost:8080/api/v1/genpdf/aap-saksbehandling-pdfgen/vedtak
 
 Templatene vil bruke flettedata fra json-fil med samme navn som template i `data/aap-saksbehandling-pdfgen`
