@@ -10,6 +10,7 @@ spec:
     inbound:
       rules:
         - application: saksbehandling
+        - application: brev
   image: {{ image }}
   replicas:
     min: 2
