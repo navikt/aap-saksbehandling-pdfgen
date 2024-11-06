@@ -1,0 +1,36 @@
+{{#if formattering.length}}
+    {{#each formattering}}
+        {{#eq this "FET"}}
+            <b>
+        {{/eq}}
+    {{/each}}
+    {{#each formattering}}
+        {{#eq this "KURSIV" }}
+            <em>
+        {{/eq}}
+    {{/each}}
+    {{#each formattering}}
+        {{#eq this "UNDERSTREK" }}
+            <u>
+        {{/eq}}
+    {{/each}}
+{{/if}}
+{{ tekst }}
+{{#if formattering.length}}
+    {{#each formattering}}
+        {{#eq this "UNDERSTREK" }}
+            </u>
+        {{/eq}}
+    {{/each}}
+    {{#each formattering}}
+        {{#eq this "KURSIV" }}
+            </em>
+        {{/eq}}
+    {{/each}}
+    {{#each formattering}}
+        {{#eq this "FET" }}
+            </b>
+        {{/eq}}
+    {{/each}}
+{{/if}}
+

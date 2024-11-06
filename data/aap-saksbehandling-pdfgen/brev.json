@@ -1,0 +1,177 @@
+{
+  "overskrift": "Overskrift H1",
+  "tekstbolker": [
+    {
+      "id": "c6448bc3-dd2c-43e3-952e-c095fea4867b",
+      "overskrift": "Overskrift H2 1",
+      "innhold": [
+        {
+          "id": "92dc0909-df62-4053-a88c-cbc44ca17c98",
+          "overskrift": "Overskrift H3 1",
+          "blokker": [
+            {
+              "id": "c98e4e03-d88b-4ea2-ab38-543fe20c9311",
+              "innhold": [
+                {
+                  "id": "118ba324-e025-4273-bde6-5844a16d8f06",
+                  "tekst": "Her er det et avsnitt.",
+                  "formattering": [],
+                  "type": "TEKST"
+                }
+              ],
+              "type": "AVSNITT"
+            }
+          ],
+          "kanRedigeres": false,
+          "erFullstendig": false
+        }
+      ]
+    },
+    {
+      "id": "61b36f20-378d-474d-afed-85bf5b6cada3",
+      "innhold": [
+        {
+          "id": "edf476ae-9848-40d9-bdd8-1a8bccb66cf5",
+          "blokker": [
+            {
+              "id": "4809dcdb-0028-46e6-93d3-1b3bb7c3bb0f",
+              "innhold": [
+                {
+                  "id": "6644bbd5-55dc-4510-a170-430fc22858d3",
+                  "tekst": "Avsnitt i ny tekstbolk uten overskrifter, med ",
+                  "formattering": [],
+                  "type": "TEKST"
+                },
+                {
+                  "id": "6644bbd5-55dc-4510-a170-430fc22858d4",
+                  "tekst": "fet,",
+                  "formattering": ["FET"],
+                  "type": "TEKST"
+                },
+                {
+                  "id": "6644bbd5-55dc-4510-a170-430fc22858d5",
+                  "tekst": "kursiv,",
+                  "formattering": ["KURSIV"],
+                  "type": "TEKST"
+                },
+                {
+                  "id": "6644bbd5-55dc-4510-a170-430fc22858d6",
+                  "tekst": "og",
+                  "formattering": [],
+                  "type": "TEKST"
+                },
+                {
+                  "id": "6644bbd5-55dc-4510-a170-430fc22858d7",
+                  "tekst": "understreket",
+                  "formattering": ["UNDERSTREK"],
+                  "type": "TEKST"
+                },
+                {
+                  "id": "6644bbd5-55dc-4510-a170-430fc22858d8",
+                  "tekst": "tekst.",
+                  "formattering": [],
+                  "type": "TEKST"
+                }
+              ],
+              "type": "AVSNITT"
+            },
+            {
+              "id": "4809dcdb-0028-46e6-93d3-1b3bb7c3bb0f",
+              "innhold": [
+                {
+                  "id": "11661090-8f4b-4233-8a1f-f8de3b5673b7",
+                  "tekst": "Avsnitt som et blokkelement i samme tekstbolk som avsnittet over.",
+                  "formattering": [],
+                  "type": "TEKST"
+                }
+              ],
+              "type": "AVSNITT"
+            }
+          ],
+          "kanRedigeres": false,
+          "erFullstendig": false
+        },
+        {
+          "id": "97ed018f-0618-4831-96cb-102b45be40d5",
+          "blokker": [
+            {
+              "id": "20f78ba8-b2f7-4bc2-85f4-c5120d7fe0f5",
+              "innhold": [
+                {
+                  "id": "a8985a38-3b34-4295-8453-4d747b771ae8",
+                  "tekst": "Og et nytt avsnitt i et nytt innholdselement i tekstbolken.",
+                  "formattering": [],
+                  "type": "TEKST"
+                }
+              ],
+              "type": "AVSNITT"
+            }
+          ],
+          "kanRedigeres": true,
+          "erFullstendig": false
+        }
+      ]
+    },
+    {
+      "id": "fe35da90-9a64-4798-82ad-c3914af3897d",
+      "overskrift": "Overskrift H2 2",
+      "innhold": [
+        {
+          "id": "27d99a11-d242-4a29-881f-40d79335c222",
+          "blokker": [
+            {
+              "id": "aa23e296-f4c0-4458-bb58-864a83278870",
+              "innhold": [
+                {
+                  "id": "d576b287-2a22-4e17-91ad-332af74297c6",
+                  "tekst": "Innledende tekst til en punktliste:",
+                  "formattering": [],
+                  "type": "TEKST"
+                }
+              ],
+              "type": "AVSNITT"
+            },
+            {
+              "id": "063122a9-f555-4cbf-a34a-25f8d3a81215",
+              "innhold": [
+                {
+                  "id": "50f955d7-c828-40c8-ac2a-4e8339ce2f9b",
+                  "tekst": "Første listepunkt",
+                  "formattering": [],
+                  "type": "TEKST"
+                },
+                {
+                  "id": "cc8a35fe-ba53-4bee-8247-836a1b8aa2c1",
+                  "tekst": "Listepunkt med fet formattering",
+                  "formattering": [
+                    "FET"
+                  ],
+                  "type": "TEKST"
+                },
+                {
+                  "id": "c366a63b-747f-4cc3-af52-64df8b619e72",
+                  "tekst": "Listepunkt med understrek",
+                  "formattering": [
+                    "UNDERSTREK"
+                  ],
+                  "type": "TEKST"
+                },
+                {
+                  "id": "173928cb-3992-4f60-a7d6-60e5eb3c33dd",
+                  "tekst": "Listepunkt i kursiv",
+                  "formattering": [
+                    "KURSIV"
+                  ],
+                  "type": "TEKST"
+                }
+              ],
+              "type": "LISTE"
+            }
+          ],
+          "kanRedigeres": false,
+          "erFullstendig": true
+        }
+      ]
+    }
+  ]
+}

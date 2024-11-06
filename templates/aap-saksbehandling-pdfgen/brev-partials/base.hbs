@@ -6,7 +6,7 @@
         <meta name="description" content="{{> docdescription}}"/>
         <meta name="subject" content="{{> docsubject}}"/>
         <meta name="author" content="NAV IT"/>
-        {{#block 'aap-saksbehandling-pdfgen/fellesmodell-partials/style' }}
+        {{#block 'aap-saksbehandling-pdfgen/brev-partials/style' }}
         {{/block}}
     </head>
     <body>
@@ -22,24 +22,16 @@
             </div>
         </div>
         <div class="title-wrapper">
-            <h1>{{> title}}</h1>
+            <h1>{{> overskrift }}</h1>
         </div>
         <div class="container">
-            {{#each underblokker as |blokk|~}}
-                {{#if blokk.overskrift}}
-                    {{#eq blokk.nivå 'H1'}}
-                        <h1>{{ blokk.overskrift }}</h1>
-                    {{/eq}}
-                    {{#eq blokk.nivå 'H2'}}
-                        <h2>{{ blokk.overskrift }}</h2>
-                    {{/eq}}
-                    {{#eq blokk.nivå 'H3'}}
-                        <h3>{{ blokk.overskrift }}</h3>
-                    {{/eq}}
+            {{#each tekstbolker}}
+                {{#if this.overskrift}}
+                    <h2>{{ this.overskrift }}</h2>
                 {{/if}}
                 <div class="blokk avoid-page-break">
-                    {{#each blokk.content as |content|~}}
-                        {{> aap-saksbehandling-pdfgen/fellesmodell-partials/elementpartial content}}
+                    {{#each this.innhold}}
+                        {{> aap-saksbehandling-pdfgen/brev-partials/innhold this}}
                     {{/each}}
                 </div>
             {{/each}}

@@ -1,0 +1,11 @@
+{{#if this.overskrift}}
+    <h3>{{ overskrift }}</h3>
+{{/if}}
+{{#each blokker}}
+    {{#eq this.type "LISTE"}}
+        {{> aap-saksbehandling-pdfgen/brev-partials/orderedlist this}}
+    {{/eq}}
+    {{#eq this.type "AVSNITT"}}
+        {{> aap-saksbehandling-pdfgen/brev-partials/paragraph this}}
+    {{/eq}}
+{{/each}}

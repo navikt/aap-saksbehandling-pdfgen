@@ -1,0 +1,7 @@
+{{#each innhold}}
+    <li>
+        {{#eq this.type "TEKST"}}
+            {{> aap-saksbehandling-pdfgen/brev-partials/formatterttekst this}}
+        {{/eq}}
+    </li>
+{{/each}}
