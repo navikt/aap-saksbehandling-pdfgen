@@ -1,7 +1,8 @@
 {
   "mottaker": {
     "navn": "Fornavn Etternavn",
-    "ident": "12345678901"
+    "ident": "12345678901",
+    "identType": "FNR"
   },
   "dato": "01.01.01",
   "saksnummer": "SAK123",

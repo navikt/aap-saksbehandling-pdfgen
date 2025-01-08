@@ -14,12 +14,13 @@
         <div class="header">
             <img class="navLogo" alt="nav logo" src="{{ image "navlogored.png" }}" />
 
-            <div class="personalia">
-                <p>Navn: {{ mottaker.navn }}</p>
-                <p>Fødselsnummer: {{ mottaker.ident }}</p>
-                <p>Dato: {{dato}}</p>
-                <p>Saksnummer: {{saksnummer}}</p>
-            </div>
+            {{#eq mottaker.identType "FNR"}}
+                {{> aap-saksbehandling-pdfgen/brev-partials/mottakerfnr this}}
+            {{/eq}}
+            {{#eq mottaker.identType "HPRNR"}}
+                {{> aap-saksbehandling-pdfgen/brev-partials/mottakerhprnr this}}
+            {{/eq}}
+
         </div>
         <div class="title-wrapper">
             <h1>{{> overskrift }}</h1>
@@ -37,9 +38,5 @@
             {{/each}}
         </div>
         </main>
-        <div id="footer">
-            <span class="saksnummer">Saksnummer {{ saksnummer }}</span>
-            <span class="sidetall">side <span id="pagenumber"></span> av <span id="pagecount"></span></span>
-        </div>
     </body>
 </html>

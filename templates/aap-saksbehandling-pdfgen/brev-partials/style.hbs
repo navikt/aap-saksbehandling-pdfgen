@@ -5,11 +5,13 @@
         margin: 1cm 0.3cm 0.5cm;
         padding-bottom: 1cm;
 
+        {{#eq mottaker.identType "FNR"}}
         @bottom-left {
             font-family: "Source Sans Pro", SourceSansPro, Source_Sans_Pro, ArialSystem, sans-serif;
             font-size: 12px;
             content: "Saksnummer {{saksnummer}}";
         }
+        {{/eq}}
 
         @bottom-right {
             font-family: "Source Sans Pro", SourceSansPro, Source_Sans_Pro, ArialSystem, sans-serif;
@@ -41,12 +43,12 @@
         margin-bottom: 40px;
     }
 
-    .personalia {
+    .mottaker {
         clear: both;
         padding-bottom: 16px;
     }
 
-    .personalia p {
+    .mottaker p {
         margin: 0;
         margin-bottom: 0.5rem;
     }
