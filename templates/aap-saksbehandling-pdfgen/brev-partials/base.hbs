@@ -14,12 +14,7 @@
         <div class="header">
             <img class="navLogo" alt="nav logo" src="{{ image "navlogored.png" }}" />
 
-            {{#eq mottaker.identType "FNR"}}
-                {{> aap-saksbehandling-pdfgen/brev-partials/mottakerfnr this}}
-            {{/eq}}
-            {{#eq mottaker.identType "HPRNR"}}
-                {{> aap-saksbehandling-pdfgen/brev-partials/mottakerhprnr this}}
-            {{/eq}}
+            {{> aap-saksbehandling-pdfgen/brev-partials/mottaker this}}
 
         </div>
         <div class="title-wrapper">
