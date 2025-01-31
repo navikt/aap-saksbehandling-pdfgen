@@ -3,14 +3,14 @@
 {{#eq mottaker.identType "FNR"}}
     <p>Navn: {{ mottaker.navn }}</p>
     <p>Fødselsnummer: {{ mottaker.ident }}</p>
-    <p>Dato: {{dato}}</p>
+    <p>Dato: {{iso_to_date dato}}</p>
     <p>Saksnummer: {{saksnummer}}</p>
 {{/eq}}
 
 {{#eq mottaker.identType "HPRNR"}}
     <p>Til: {{ mottaker.navn }}</p>
     <p>HPR-nummer: {{ mottaker.ident }}</p>
-    <p>Dato: {{dato}}</p>
+    <p>Dato: {{iso_to_date dato}}</p>
     <p>Vår referanse: {{saksnummer}}</p>
 {{/eq}}
 
