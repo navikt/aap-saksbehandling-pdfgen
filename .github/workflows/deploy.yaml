@@ -39,7 +39,7 @@ jobs:
       manifest: .nais/dev.yaml
 
   deploy_to_prod:
-    name: Deploy to dev
+    name: Deploy to prod
     permissions:
       contents: read
       id-token: write
