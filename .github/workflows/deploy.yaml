@@ -19,8 +19,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Push docker image to GAR and sign image
         uses: nais/docker-build-push@v0
-        env: # Workaround for rate limiting inntil denne er fikset: https://github.com/aquasecurity/trivy-action/issues/389
-          TRIVY_JAVA_DB_REPOSITORY: "public.ecr.aws/aquasecurity/trivy-java-db:1"
         id: docker-build-push
         with:
           team: aap
@@ -39,3 +37,15 @@ jobs:
     with:
       cluster: dev-gcp
       manifest: .nais/dev.yaml
+
+  deploy_to_prod:
+    name: Deploy to dev
+    permissions:
+      contents: read
+      id-token: write
+    needs: deploy_to_dev
+    uses: navikt/aap-workflows/.github/workflows/deploy.yml@main
+    secrets: inherit
+    with:
+      cluster: prod-gcp
+      manifest: .nais/prod.yaml
