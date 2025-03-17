@@ -11,6 +11,7 @@ spec:
       rules:
         - application: saksbehandling
         - application: brev
+        - application: postmottak
   image: {{ image }}
   ingresses:
     - https://aap-saksbehandling-pdfgen.intern.nav.no

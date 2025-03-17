@@ -12,6 +12,7 @@ spec:
         - application: saksbehandling
         - application: saksbehandling-lokal # For lokal utvikling. IKKE kopier denne til prod.yaml
         - application: brev
+        - application: postmottak
   image: {{ image }}
   ingresses:
     - https://aap-saksbehandling-pdfgen.intern.dev.nav.no
