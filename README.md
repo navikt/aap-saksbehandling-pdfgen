@@ -6,6 +6,11 @@ http://localhost:8020/api/v1/genpdf/aap-saksbehandling-pdfgen/brev
 
 Templatene vil bruke flettedata fra json-fil med samme navn som template i `data/aap-saksbehandling-pdfgen`
 
+> **Note**
+>
+> Repoet kan inneholde regelverksendringer som ikke enda er vedtatt.
+> Vi har derfor valgt å holde dette repoet lukket.
+
 ## Hjelpefunksjoner
 
 https://github.com/navikt/pdfgen/blob/master/src/main/kotlin/no/nav/pdfgen/template/Helpers.kt
