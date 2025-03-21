@@ -7,8 +7,6 @@
   "dato": "3. februar 2025",
   "saksnummer": "SAK123",
   "overskrift": "Overskrift H1",
-  "enhet": "Navenhet, Nummer + Navn",
-  "saksbehandler": "SaksbehandlerNavn",
   "tekstbolker": [
     {
       "overskrift": "Overskrift H2 1",
