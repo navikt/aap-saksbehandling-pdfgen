@@ -132,5 +132,11 @@
         }
       ]
     }
+  ],
+  "signaturer": [
+    {
+      "navn": "Fornavn Etternavn",
+      "enhet": "Nav Enhet"
+    }
   ]
 }
