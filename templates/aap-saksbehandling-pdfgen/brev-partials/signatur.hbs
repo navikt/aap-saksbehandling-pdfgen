@@ -1,4 +1,9 @@
-<!--/*TODO: Venter på avklaring på innhold i brev*/-->
-<div class="signatur">
-    <p>Med vennlig hilsen</p>
+<div class="signatur-wrapper avoid-page-break">
+    <p>Med vennlig hilsen,</p>
+    {{#each signaturer}}
+        <div class="signatur">
+            <p>{{navn}}</p>
+            <p>{{enhet}}</p>
+        </div>
+    {{/each}}
 </div>
