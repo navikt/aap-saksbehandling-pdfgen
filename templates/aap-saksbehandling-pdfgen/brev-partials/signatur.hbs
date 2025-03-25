@@ -1,4 +1,5 @@
 <div class="signatur-wrapper avoid-page-break">
+    {{#unless automatisk}}
     <p>Med vennlig hilsen</p>
     {{#each signaturer}}
         <div class="signatur">
@@ -6,4 +7,5 @@
             <p>{{enhet}}</p>
         </div>
     {{/each}}
+    {{/unless}}
 </div>
