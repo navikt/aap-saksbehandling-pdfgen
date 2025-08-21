@@ -17,7 +17,7 @@
             {
               "innhold": [
                 {
-                  "tekst": "Her er det et avsnitt.",
+                  "tekst": "Her er det et avsnitt.\n\nNytt avsnitt etter newlines.",
                   "formattering": []
                 }
               ],
