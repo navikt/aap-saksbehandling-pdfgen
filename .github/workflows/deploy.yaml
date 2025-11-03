@@ -1,4 +1,4 @@
-name: Deploy til dev ved endringer på main
+name: Deploy til dev og prod ved endringer på main
 on:
   push:
     branches:
@@ -40,6 +40,7 @@ jobs:
 
   deploy_to_prod:
     name: Deploy to prod
+    if: ${{ github.ref == 'refs/heads/main' }}
     permissions:
       contents: read
       id-token: write
