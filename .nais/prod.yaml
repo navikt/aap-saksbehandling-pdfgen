@@ -12,6 +12,7 @@ spec:
         - application: saksbehandling
         - application: brev
         - application: postmottak
+        - application: brev-sanity-proxy
   image: {{ image }}
   ingresses:
     - https://aap-saksbehandling-pdfgen.intern.nav.no
