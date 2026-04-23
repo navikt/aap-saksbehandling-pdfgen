@@ -1,4 +1,4 @@
-name: Deploy til dev og prod ved endringer på main
+name: Bygg og deploy
 on:
   push:
     branches:
@@ -6,6 +6,7 @@ on:
     paths-ignore:
       - '**.md'
   workflow_dispatch:
+
 jobs:
   build:
     permissions:
@@ -25,6 +26,10 @@ jobs:
           identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }}
           project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }}
           tag: ${{ github.sha }}
+      - name: Push image to ghcr.io
+        run: | # Logger inn i GHCR og pusher det samme imaget dit, slik at det kan brukes i lokale docker-compose filer.
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker buildx imagetools create -t ghcr.io/${{ github.repository }}:${{ github.sha }} ${{ steps.docker-build-push.outputs.image }}
 
   deploy_to_dev:
     name: Deploy to dev
