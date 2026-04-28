@@ -14,6 +14,7 @@ spec:
         - application: brev
         - application: postmottak
         - application: brev-sanity-proxy
+        - application: behandlingsflyt
   image: {{ image }}
   ingresses:
     - https://aap-saksbehandling-pdfgen.intern.dev.nav.no
