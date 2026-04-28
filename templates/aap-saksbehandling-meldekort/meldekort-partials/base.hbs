@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+    <meta charset="UTF-8"/>
+    <title>{{> doctitle}}</title>
+    <meta name="description" content="{{> docdescription}}"/>
+    <meta name="subject" content="{{> docsubject}}"/>
+    <meta name="author" content="NAV IT"/>
+    {{#block 'aap-saksbehandling-meldekort/meldekort-partials/style' }}
+    {{/block}}
+</head>
+<body>
+
+<img class="navlogo" alt="nav logo" src="{{ image "Hvit-resized.png" }}"/>
+
+<div class="personinfo">
+    <p class="litenskrift">Fødselsnummer: {{ insert_at ident 6 }}</p>
+    <p class="litenskrift">Mottatt: {{ sendtInnDato }}</p>
+</div>
+
+<div>
+    <h1 class="overskrift">Korrigering av meldekort for {{ meldeperiode.uker }}</h1>
+    <p class="mellomstorskrift">{{ meldeperiode.fraOgMedDato}} - {{ meldeperiode.tilOgMedDato }}</p>
+</div>
+
+
+<div class="margin16">
+    <p class="bold">Antall timer arbeidet</p>
+    {{#each meldekort.timerArbeidPerUkeIPerioden as |uke|~}}
+        <div class="uke">
+            <p>Uke {{ ukenummer }} {{ uke.fraOgMedDato }} - {{ uke.tilOgMedDato }}</p>
+            {{#each uke.dager as |dag|~}}
+                <div class="dag">
+                    <p>{{ dag.dag }}: {{dag.timerArbeid}} timer</p>
+                </div>
+            {{/each}}
+        </div>
+    {{/each}}
+</div>
+
+<div class="margin16">
+    <p class="bold">Sammenlagt for perioden</p>
+    <p>{{sammenlagtArbeidIPerioden}} timer arbeidet</p>
+</div>
+
+<div class="margin16">
+    <p class="bold">Utført av</p>
+    <p>{{utførtAv}}</p>
+</div>
+
+
+<div id="footer">
+    <span class="sidetall">side <span id="pagenumber"></span> av <span id="pagecount"></span></span>
+</div>
+</body>
+</html>
