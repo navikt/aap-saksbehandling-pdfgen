@@ -2,6 +2,7 @@
   "ident": "11223344556",
   "sendtInnDato": "28.03.2025",
   "utførtAv": "Kjell T. Ringen",
+  "begrunnelse": "Dette er begrunnelsen for korrigering",
   "sammenlagtArbeidIPerioden": 12,
   "meldeperiode": {
     "fraOgMedDato": "13.03.2025",
