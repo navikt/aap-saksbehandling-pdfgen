@@ -6,12 +6,12 @@ metadata:
   labels:
     team: aap
 spec:
+  resources:
+    limits:
+      memory: 1024Mi
+    requests:
+      memory: 512Mi
   accessPolicy:
-    resources:
-      limits:
-        memory: 1024Mi
-      requests:
-        memory: 512Mi
     inbound:
       rules:
         - application: saksbehandling
