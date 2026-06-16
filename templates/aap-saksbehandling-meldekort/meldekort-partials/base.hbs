@@ -15,7 +15,7 @@
 
 <div class="personinfo">
     <p class="litenskrift">Fødselsnummer: {{ insert_at ident 6 }}</p>
-    <p class="litenskrift">Mottatt: {{ sendtInnDato }}</p>
+    <p class="litenskrift">Innsendt: {{ sendtInnDato }}</p>
 </div>
 
 <div>
@@ -23,6 +23,10 @@
     <p class="mellomstorskrift">{{ meldeperiode.fraOgMedDato}} - {{ meldeperiode.tilOgMedDato }}</p>
 </div>
 
+<div class="margin16">
+    <p class="bold">Meldedato</p>
+    <p>{{meldeDato}}</p>
+</div>
 
 <div class="margin16">
     <p class="bold">Antall timer arbeidet</p>
