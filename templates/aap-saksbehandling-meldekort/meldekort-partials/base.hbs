@@ -28,6 +28,7 @@
     <p>{{meldeDato}}</p>
 </div>
 
+{{#if meldekort.timerArbeidPerUkeIPerioden}}
 <div class="margin16">
     <p class="bold">Antall timer arbeidet</p>
     {{#each meldekort.timerArbeidPerUkeIPerioden as |uke|~}}
@@ -46,6 +47,7 @@
     <p class="bold">Sammenlagt for perioden</p>
     <p>{{sammenlagtArbeidIPerioden}} timer arbeidet</p>
 </div>
+{{/if}}
 
 <div class="margin16">
     <p class="bold">Begrunnelse</p>
