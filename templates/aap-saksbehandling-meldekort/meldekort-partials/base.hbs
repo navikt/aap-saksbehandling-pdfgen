@@ -19,7 +19,7 @@
 </div>
 
 <div>
-    <h1 class="overskrift">Korrigering av meldekort for {{ meldeperiode.uker }}</h1>
+    <h1 class="overskrift">{{#if meldekort.timerArbeidPerUkeIPerioden}}Korrigering av meldekort{{else}}Registrering av meldeplikt{{/if}} for {{ meldeperiode.uker }}</h1>
     <p class="mellomstorskrift">{{ meldeperiode.fraOgMedDato}} - {{ meldeperiode.tilOgMedDato }}</p>
 </div>
 
