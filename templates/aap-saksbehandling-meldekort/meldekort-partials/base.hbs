@@ -15,15 +15,20 @@
 
 <div class="personinfo">
     <p class="litenskrift">Fødselsnummer: {{ insert_at ident 6 }}</p>
-    <p class="litenskrift">Mottatt: {{ sendtInnDato }}</p>
+    <p class="litenskrift">Innsendt: {{ sendtInnDato }}</p>
 </div>
 
 <div>
-    <h1 class="overskrift">Korrigering av meldekort for {{ meldeperiode.uker }}</h1>
+    <h1 class="overskrift">{{#if meldekort.timerArbeidPerUkeIPerioden}}Korrigering av meldekort{{else}}Registrering av meldeplikt{{/if}} for {{ meldeperiode.uker }}</h1>
     <p class="mellomstorskrift">{{ meldeperiode.fraOgMedDato}} - {{ meldeperiode.tilOgMedDato }}</p>
 </div>
 
+<div class="margin16">
+    <p class="bold">Meldedato</p>
+    <p>{{meldeDato}}</p>
+</div>
 
+{{#if meldekort.timerArbeidPerUkeIPerioden}}
 <div class="margin16">
     <p class="bold">Antall timer arbeidet</p>
     {{#each meldekort.timerArbeidPerUkeIPerioden as |uke|~}}
@@ -42,6 +47,7 @@
     <p class="bold">Sammenlagt for perioden</p>
     <p>{{sammenlagtArbeidIPerioden}} timer arbeidet</p>
 </div>
+{{/if}}
 
 <div class="margin16">
     <p class="bold">Begrunnelse</p>

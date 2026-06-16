@@ -1,6 +1,7 @@
 {
   "ident": "11223344556",
-  "sendtInnDato": "28.03.2025",
+  "sendtInnDato": "30.03.2025",
+  "meldeDato": "28.03.2026",
   "utførtAv": "Kjell T. Ringen",
   "begrunnelse": "Dette er begrunnelsen for korrigering",
   "sammenlagtArbeidIPerioden": 12,
@@ -44,3 +45,6 @@
     ]
   }
 }
+
+
+
