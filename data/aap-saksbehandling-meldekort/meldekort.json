@@ -3,6 +3,7 @@
   "sendtInnDato": "30.03.2025",
   "meldeDato": "28.03.2026",
   "utførtAv": "Kjell T. Ringen",
+  "korrigert": false,
   "begrunnelse": "Dette er begrunnelsen for korrigering",
   "sammenlagtArbeidIPerioden": 12,
   "meldeperiode": {
