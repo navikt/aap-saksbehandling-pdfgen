@@ -26,7 +26,7 @@
         {{/if}}
         {{else}}Registrering av meldeplikt {{meldeDato}}{{/if}}
     </h1>
-    <p class="mellomstorskrift">{{ meldeperiode.fraOgMedDato}} - {{ meldeperiode.tilOgMedDato }}</p>
+    <p class="mellomstorskrift">{{#if meldekort.timerArbeidPerUkeIPerioden}}{{ meldeperiode.fraOgMedDato}} - {{ meldeperiode.tilOgMedDato }}{{/if}}</p>
 </div>
 
 <div class="margin16">
